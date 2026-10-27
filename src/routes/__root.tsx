@@ -74,7 +74,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "أيمن للدواجن والمشويات — منيو المطعم" },
+      { title: "أيمن للدواجن والمشويات — منيو المحل" },
       { name: "description", content: "منتجات طازجة، مشويات على الفحم، وتجهيزات جاهزة تناسب كل عزومة." },
       { property: "og:title", content: "أيمن للدواجن والمشويات" },
       { property: "og:description", content: "منتجات طازجة، مشويات على الفحم، وتجهيزات جاهزة تناسب كل عزومة." },

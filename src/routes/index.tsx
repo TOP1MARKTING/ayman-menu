@@ -7,7 +7,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { menuSections } from "@/data/menu";
 
-const PAGE_TITLE = "أيمن للدواجن والمشويات — منيو المطعم";
+const PAGE_TITLE = "أيمن للدواجن والمشويات — منيو المحل";
 const PAGE_DESCRIPTION =
   "منيو أيمن للدواجن والمشويات: منتجات طازجة، ركن الكفتة والاستربس، خدمة الشوي، المشويات على الفحم، تجهيزات جاهزة، ووجبات للمناسبات والعزومات. للتواصل: 01010986051";
 

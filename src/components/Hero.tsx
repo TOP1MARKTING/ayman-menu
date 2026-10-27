@@ -11,7 +11,7 @@ export function Hero() {
           <div className="flex justify-center lg:justify-start">
             <LogoMark size={168} />
           </div>
-          <h1 className="mt-5 text-5xl font-bold text-foreground sm:text-6xl lg:text-7xl">منيو المطعم</h1>
+          <h1 className="mt-5 text-5xl font-bold text-foreground sm:text-6xl lg:text-7xl">منيو المحل</h1>
           <p className="mx-auto mt-4 max-w-xl text-balance text-lg leading-relaxed text-muted-foreground sm:text-xl lg:mx-0">
             منتجات طازجة، مشويات على الفحم، وتجهيزات جاهزة تناسب كل عزومة
           </p>
