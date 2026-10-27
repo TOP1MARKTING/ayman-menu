@@ -21,7 +21,7 @@ describe("menu data rules", () => {
   it("shows daily-price labels without numeric prices for fresh products", () => {
     const fresh = menuSections.find((s) => s.id === "fresh");
     expect(fresh).toBeDefined();
-    expect(fresh!.items).toHaveLength(9);
+    expect(fresh!.items).toHaveLength(8);
     for (const item of fresh!.items) {
       expect(item.price).toBeUndefined();
       expect(item.label).toBe(DAILY_PRICE_LABEL);
@@ -34,6 +34,7 @@ describe("menu data rules", () => {
     expect(priceOf("شوي فرخة كاملة")).toBe("60 جنيه");
     expect(priceOf("شوي نصف فرخة")).toBe("30 جنيه");
     expect(priceOf("شوي ربع فرخة")).toBe("15 جنيه");
+    expect(priceOf("شوي شيش طاووق")).toBe("80 جنيه");
     expect(priceOf("فرخة كاملة مشوية")).toBe("300 جنيه");
     expect(priceOf("نصف فرخة مشوية")).toBe("150 جنيه");
     expect(priceOf("ربع فرخة مشوية")).toBe("75 جنيه");

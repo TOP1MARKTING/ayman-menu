@@ -2,7 +2,6 @@
 // Images live in src/assets/menu/ and are imported once below.
 
 import duck from "@/assets/menu/duck.jpg";
-import wholeChicken from "@/assets/menu/whole-chicken.jpg";
 import baniehStrips from "@/assets/menu/banieh-strips.jpg";
 import thighsBone from "@/assets/menu/thighs-bone.jpg";
 import chickenFeet from "@/assets/menu/chicken-feet.jpg";
@@ -15,6 +14,7 @@ import chickenStripsBreaded from "@/assets/menu/chicken-strips-breaded.jpg";
 import grillServiceWhole from "@/assets/menu/grill-service-whole.jpg";
 import grillServiceHalf from "@/assets/menu/grill-service-half.jpg";
 import grillServiceQuarter from "@/assets/menu/grill-service-quarter.jpg";
+import shishTawookGrill from "@/assets/menu/shish-tawook.jpg";
 import grilledWholePlated from "@/assets/menu/grilled-whole-plated.jpg";
 import grilledHalfPlated from "@/assets/menu/grilled-half-plated.jpg";
 import grilledQuarterPlated from "@/assets/menu/grilled-quarter-plated.jpg";
@@ -62,13 +62,12 @@ export const menuSections: MenuSectionData[] = [
     title: "منتجاتنا الطازجة",
     items: [
       { name: "بط بلدي", image: duck, label: DAILY_PRICE_LABEL, featured: true },
-      { name: "فراخ جاهزة\nعلى الطبخ", image: wholeChicken, label: DAILY_PRICE_LABEL, featured: true },
+      { name: "فراخ بيضاء\nتربية بيتي", image: whiteChickens, label: DAILY_PRICE_LABEL, featured: true },
       { name: "بانيه شرائح فريش", image: baniehStrips, label: DAILY_PRICE_LABEL },
       { name: "أوراك بالعظم", image: thighsBone, label: DAILY_PRICE_LABEL },
       { name: "دبابيس دجاج", image: chickenFeet, label: DAILY_PRICE_LABEL },
       { name: "أجنحة دجاج", image: wings, label: DAILY_PRICE_LABEL },
       { name: "حمام بلدي", image: pigeons, label: DAILY_PRICE_LABEL },
-      { name: "فراخ بيضاء\nتربية بيتي", image: whiteChickens, label: DAILY_PRICE_LABEL },
       { name: "بيض أبيض", image: eggs, label: DAILY_PRICE_LABEL },
     ],
   },
@@ -90,6 +89,7 @@ export const menuSections: MenuSectionData[] = [
       { name: "شوي فرخة كاملة", image: grillServiceWhole, price: "60 جنيه" },
       { name: "شوي نصف فرخة", image: grillServiceHalf, price: "30 جنيه" },
       { name: "شوي ربع فرخة", image: grillServiceQuarter, price: "15 جنيه" },
+      { name: "شوي شيش طاووق", image: shishTawookGrill, price: "80 جنيه" },
     ],
   },
   {
