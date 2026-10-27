@@ -47,10 +47,10 @@ describe("menu data rules", () => {
   });
 
   it("assigns no weight where none was specified", () => {
-    expect(nameOf("كفتة لحمة")).toBe("كفتة لحمة على الفحم");
-    expect(nameOf("كفتة فراخ")).toBe("كفتة فراخ على الفحم");
-    expect(nameOf("برجر لحمة")).toBe("برجر لحمة على الفحم");
-    expect(nameOf("شيش طاووق")).toBe("شيش طاووق فراخ على الفحم");
+    expect(nameOf("كفتة لحمة")).toBe("كفتة لحمة\nعلى الفحم");
+    expect(nameOf("كفتة فراخ")).toBe("كفتة فراخ\nعلى الفحم");
+    expect(nameOf("برجر لحمة")).toBe("برجر لحمة\nعلى الفحم");
+    expect(nameOf("شيش طاووق")).toBe("شيش طاووق فراخ\nعلى الفحم");
   });
 
   it("marks grilling-service prices as service-only and offers free tahini", () => {

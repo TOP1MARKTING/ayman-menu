@@ -16,7 +16,9 @@ export function MenuSection({ section }: { section: MenuSectionData; first?: boo
             <h2 className="mt-4 text-3xl font-bold text-foreground sm:text-5xl">{section.title}</h2>
             {section.badge ? <p className="badge-gold mt-4">{section.badge}</p> : null}
             {section.note ? (
-              <p className="mt-3 text-base leading-relaxed text-foreground/90 sm:text-lg">{section.note}</p>
+              <p className="mx-auto mt-3 max-w-md text-balance text-base leading-relaxed text-foreground/90 sm:text-lg">
+                {section.note}
+              </p>
             ) : null}
           </header>
         </Reveal>

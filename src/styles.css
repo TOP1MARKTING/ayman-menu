@@ -285,8 +285,10 @@
   font-family: var(--font-sans);
   font-size: 1.125rem;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.55;
   color: var(--foreground);
+  white-space: pre-line;
+  text-wrap: balance;
 }
 
 .plate-note {
@@ -318,6 +320,57 @@
 
 .plate-row.is-flip .plate-price::before {
   margin-inline-start: auto;
+}
+
+.credit-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+  padding: 0.42rem 0.95rem;
+  border-radius: 999px;
+  background: #fff;
+  color: #07285d;
+  box-shadow: 0 12px 28px -18px rgb(0 0 0 / 80%);
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.credit-pill:hover {
+  transform: translateY(-1px);
+}
+
+.credit-mark {
+  display: block;
+  height: 2.05rem;
+  width: auto;
+}
+
+.credit-word,
+.credit-brand {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.credit-word {
+  color: #dbb44d;
+}
+
+.credit-brand {
+  color: #07285d;
+  letter-spacing: -0.02em;
+}
+
+.credit-brand span {
+  color: #dbb44d;
+}
+
+.credit-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  color: #07285d;
 }
 
 .phone-link {

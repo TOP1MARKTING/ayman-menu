@@ -7,7 +7,7 @@ export function ProductCard({ item, flip = false }: { item: MenuItem; flip?: boo
       <div className="plate-disc">
         <img
           src={item.image}
-          alt={item.name}
+          alt={item.name.replaceAll("\n", " ")}
           loading="lazy"
           decoding="async"
           width={640}
