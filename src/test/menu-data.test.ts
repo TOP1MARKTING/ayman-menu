@@ -28,8 +28,24 @@ describe("menu data rules", () => {
     }
   });
 
+  it("keeps charcoal kofta and burger items in one section", () => {
+    const section = menuSections.find((s) => s.id === "kofta-burger");
+    expect(section!.title).toBe("ركن الكفتة والبرجر على الفحم");
+    expect(section!.items.map((item) => item.name)).toEqual([
+      "كفتة على الفحم",
+      "برجر عادي",
+      "برجر تشيز",
+      "كفتة فراخ\nعلى الفحم",
+      "كيلو شيش طاووق\nعلى الفحم",
+    ]);
+    expect(priceOf("كفتة على الفحم")).toBe("350 جنيه");
+    expect(priceOf("برجر عادي")).toBe("300 جنيه");
+    expect(priceOf("برجر تشيز")).toBe("330 جنيه");
+    expect(priceOf("كفتة فراخ")).toBe("350 جنيه");
+    expect(priceOf("كيلو شيش طاووق")).toBe("220 جنيه");
+  });
+
   it("keeps the exact prices provided by the restaurant", () => {
-    expect(priceOf("كفتة على الفحم")).toBe("300 جنيه");
     expect(priceOf("استربس دجاج")).toBe("250 جنيه");
     expect(priceOf("شوي فرخة كاملة")).toBe("60 جنيه");
     expect(priceOf("شوي نصف فرخة")).toBe("30 جنيه");
@@ -41,17 +57,21 @@ describe("menu data rules", () => {
     expect(priceOf("طبق أرز بسمتي")).toBe("30 جنيه");
     expect(priceOf("استربس جاهز")).toBe("250 جنيه");
     expect(priceOf("بانيه جاهز")).toBe("250 جنيه");
-    expect(priceOf("كفتة لحمة")).toBe("300 جنيه");
-    expect(priceOf("كفتة فراخ")).toBe("350 جنيه");
-    expect(priceOf("برجر لحمة")).toBe("300 جنيه");
-    expect(priceOf("شيش طاووق")).toBe("240 جنيه");
   });
 
   it("assigns no weight where none was specified", () => {
-    expect(nameOf("كفتة لحمة")).toBe("كفتة لحمة\nعلى الفحم");
+    expect(nameOf("كفتة على الفحم")).toBe("كفتة على الفحم");
+    expect(nameOf("برجر عادي")).toBe("برجر عادي");
+    expect(nameOf("برجر تشيز")).toBe("برجر تشيز");
     expect(nameOf("كفتة فراخ")).toBe("كفتة فراخ\nعلى الفحم");
-    expect(nameOf("برجر لحمة")).toBe("برجر لحمة\nعلى الفحم");
-    expect(nameOf("شيش طاووق")).toBe("شيش طاووق فراخ\nعلى الفحم");
+    expect(nameOf("كيلو شيش طاووق")).toBe("كيلو شيش طاووق\nعلى الفحم");
+  });
+
+  it("removes meat kofta and burgers from ready-to-cook", () => {
+    const ready = menuSections.find((s) => s.id === "ready-to-cook")!;
+    expect(ready.items.every((item) => !item.name.includes("كفتة"))).toBe(true);
+    expect(ready.items.every((item) => !item.name.includes("برجر"))).toBe(true);
+    expect(ready.items.every((item) => !item.name.includes("شيش"))).toBe(true);
   });
 
   it("marks grilling-service prices as service-only and offers free tahini", () => {

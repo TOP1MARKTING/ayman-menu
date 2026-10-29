@@ -21,9 +21,9 @@ import grilledQuarterPlated from "@/assets/menu/grilled-quarter-plated.jpg";
 import basmatiRice from "@/assets/menu/basmati-rice.jpg";
 import stripsReadyFry from "@/assets/menu/strips-ready-fry.jpg";
 import paneReadyFry from "@/assets/menu/pane-ready-fry.jpg";
-import rawMeatKofta from "@/assets/menu/raw-meat-kofta.jpg";
 import rawChickenKofta from "@/assets/menu/raw-chicken-kofta.jpg";
 import rawBurger from "@/assets/menu/raw-burger.jpg";
+import cheeseBurger from "@/assets/menu/beef-burger.jpg";
 import rawShishTawook from "@/assets/menu/raw-shish-tawook.jpg";
 import occasions from "@/assets/menu/occasions.jpg";
 import heroGrill from "@/assets/menu/hero-grill.jpg";
@@ -72,11 +72,14 @@ export const menuSections: MenuSectionData[] = [
     ],
   },
   {
-    id: "kofta-strips",
-    title: "ركن الكفتة والاستربس",
+    id: "kofta-burger",
+    title: "ركن الكفتة والبرجر على الفحم",
     items: [
-      { name: "كفتة على الفحم، كيلو", image: koftaCharcoal, price: "300 جنيه", note: "جاهز على الأكل", featured: true },
-      { name: "استربس دجاج، كيلو", image: chickenStripsBreaded, price: "250 جنيه" },
+      { name: "كفتة على الفحم", image: koftaCharcoal, price: "350 جنيه", featured: true },
+      { name: "برجر عادي", image: rawBurger, price: "300 جنيه" },
+      { name: "برجر تشيز", image: cheeseBurger, price: "330 جنيه" },
+      { name: "كفتة فراخ\nعلى الفحم", image: rawChickenKofta, price: "350 جنيه" },
+      { name: "كيلو شيش طاووق\nعلى الفحم", image: rawShishTawook, price: "220 جنيه" },
     ],
   },
   {
@@ -107,12 +110,9 @@ export const menuSections: MenuSectionData[] = [
     id: "ready-to-cook",
     title: "ركن المجزئات الجاهزة",
     items: [
+      { name: "استربس دجاج، كيلو", image: chickenStripsBreaded, price: "250 جنيه" },
       { name: "استربس جاهز، كيلو\nعلى التحمير", image: stripsReadyFry, price: "250 جنيه", note: "متاح حار أو بارد" },
       { name: "بانيه جاهز، كيلو\nعلى التحمير", image: paneReadyFry, price: "250 جنيه" },
-      { name: "كفتة لحمة\nعلى الفحم", image: rawMeatKofta, price: "300 جنيه" },
-      { name: "كفتة فراخ\nعلى الفحم", image: rawChickenKofta, price: "350 جنيه" },
-      { name: "برجر لحمة\nعلى الفحم", image: rawBurger, price: "300 جنيه" },
-      { name: "شيش طاووق فراخ\nعلى الفحم", image: rawShishTawook, price: "240 جنيه" },
     ],
   },
 ];
